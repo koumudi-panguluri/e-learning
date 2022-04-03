@@ -6,12 +6,12 @@ export default function Summary() {
     {
       name: 'Experience',
       icon: DesktopComputerIcon,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.',
     },
     {
       name: 'Projects',
       icon: AnnotationIcon,
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'
     },
     {
       name: 'Education',
@@ -40,7 +40,7 @@ export default function Summary() {
         <div className={`mt-12 lg:mt-0 lg:col-span-2`}>
           <dl className={`space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-2 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8`}>
             {features.map((feature) => (
-              <div key={feature.name} className={`relative rounded-lg ${styles.summary_container}`}>
+              <div key={feature.name} className={`relative rounded-lg ${styles.summary_container} hover:shadow`}>
                 <dt>
                   <feature.icon className="h-6 w-6 text-green-200" aria-hidden="true" />
                   <p className="ml-9 text-lg leading-6 font-medium text-white-900">{feature.name}</p>
