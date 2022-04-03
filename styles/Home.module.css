@@ -1,10 +1,11 @@
-.container {
-  padding: 0 2rem;
+.main_container {
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+  /* background-color: #4c4177;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%); */
+  color: #fff
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+/*
+#9FFFCB
+*/

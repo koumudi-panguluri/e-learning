@@ -1,0 +1,18 @@
+.card_container {
+  color: #FFF;
+  padding: 16px;
+  border: #9FFFCB 1px solid;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #bf3a30;
+  background-image: linear-gradient(315deg, #9FFFCB 0%, #00A5CF 74%);
+}
+
+.nav {
+  /* background-color: #353F5A; */
+  background-color: #102c52;
+}
+
+.profile_container {}
