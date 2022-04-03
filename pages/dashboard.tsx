@@ -37,13 +37,6 @@ export default function Dashboard() {
                   <div className="border-b border-white-700">
                     <div className="flex items-center justify-between h-16 px-4 sm:px-0">
                       <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          {/* <img
-                            className="h-8 w-8"
-                            src="/alien.png"
-                            alt="E-learning"
-                          /> */}
-                        </div>
                         <div className="hidden md:block">
                           <div className="ml-10 flex items-baseline space-x-4">
                             {navigation.map((item) => (
@@ -127,9 +120,6 @@ export default function Dashboard() {
             )}
           </Disclosure>
           <header className="py-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {/* <h1 className="text-3xl font-bold text-gray">E-learning</h1> */}
-            </div>
           </header>
         </div>
 
@@ -163,6 +153,7 @@ export default function Dashboard() {
                 </div>
               </div>
 
+              {/* social media */}
               <div className="flex flex-wrap justify-center gap-2 pb-2 pt-5">
                 <a className="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full hover:opacity-50"
                   href="https://www.linkedin.com/in/sai-koundinya-panguluri-b40a16132/" target="_blank">
