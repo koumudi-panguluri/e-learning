@@ -3,6 +3,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Dashboard from './dashboard'
 import homeStyles from "../styles/Home.module.css";
+import Summary from '../components/summary';
+import Footer from '../components/footer';
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -13,6 +15,8 @@ const Home: NextPage = () => {
       </Head>
       <div className={`${homeStyles.main_container} w-full`}>
         <Dashboard />
+        <Summary />
+        <Footer />
       </div>
     </div>
   )
