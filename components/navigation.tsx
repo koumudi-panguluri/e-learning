@@ -1,6 +1,9 @@
 import styles from "../styles/Dashboard.module.css";
 import { Disclosure, Menu } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const user = {
   name: 'Tom Cook',
@@ -8,7 +11,7 @@ const user = {
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
-const navigation = [
+let navigation = [
   { name: 'Dashboard', href: '/', current: true },
   { name: 'About', href: '/about', current: false },
   { name: 'Courses', href: '/courses', current: false },
@@ -18,7 +21,27 @@ const navigation = [
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
+
 export default function Navigation() {
+  const router = useRouter()
+  const navigationHandler = () => {
+
+  }
+
+  useEffect(() => {
+    // navigation = navigation;
+    // console.log("path", router.pathname);
+    // switch (router.pathname) {
+    //   case '/':
+    //     navigation[0].current = true;
+    //     break;
+    //   case '/contact':
+    //     navigation[3].current = true;
+    //     break;
+    // }
+    console.log("navigation", navigation);
+  })
+
   return (
     <div>
       <Disclosure as="nav" className={`${styles.nav}`}>
@@ -31,18 +54,18 @@ export default function Navigation() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
-                            href={item.href}
-                            className={classNames(
+                            href={item.href}>
+                            <a className={classNames(
                               item.current
                                 ? 'bg-gray-900 text-white'
                                 : 'text-gray-100 hover:bg-gray-600 hover:text-white',
                               'px-3 py-2 rounded-md text-sm font-medium'
                             )}
-                            aria-current={item.current ? 'page' : undefined}>
-                            {item.name}
-                          </a>
+                              aria-current={item.current ? 'page' : undefined}>
+                              {item.name}</a>
+                          </Link>
                         ))}
                       </div>
                     </div>
