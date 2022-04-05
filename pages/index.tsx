@@ -9,8 +9,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>E-learning</title>
-        <meta name="description" content="E-learning next app" />
+        <title>Koundinya.psk</title>
+        <meta name="description" content="Koundinya.psk next app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${homeStyles.main_container} w-full`}>
