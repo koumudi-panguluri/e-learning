@@ -28,6 +28,11 @@ export default function Trainings() {
           itemName: 'Billing Center',
           itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
           itemType: 'billing_center',
+        },
+        {
+          itemName: 'Guidewire QA Training & Support',
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'qa',
         }
       ]
     },
@@ -37,17 +42,12 @@ export default function Trainings() {
       current: false,
       items: [
         {
-          itemName: 'Math (JEE)',
+          itemName: 'Quantitative Aptitude',
           itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
           itemType: 'jee',
         },
         {
-          itemName: 'Thermodynamics',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
-          itemType: 'thermodynamics',
-        },
-        {
-          itemName: 'GATE (Support)',
+          itemName: 'GATE (Support for Mechanical Branch)',
           itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
           itemType: 'gate',
         }

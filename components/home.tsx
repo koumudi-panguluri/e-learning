@@ -11,7 +11,7 @@ export default function Home() {
             <div className="p-7 flex items-center justify-center h-30 w-30 rounded-full">
               <img
                 className="inline-block rounded-full justify-items-center"
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                src="https://media-exp1.licdn.com/dms/image/C5603AQFhmBgQcVbabQ/profile-displayphoto-shrink_400_400/0/1589051295850?e=2147483647&v=beta&t=tSJOcOfZNgLyxi5Aa58HdEZhVplzMH7S3dlyUiphsWY"
                 height={200}
                 width={200}
                 alt="" />
@@ -21,7 +21,7 @@ export default function Home() {
             </div>
             <div className='flex flex-col justify-center pb-2'>
               <div className="text-2xl font-normal self-center">Koundinya Panguluri</div>
-              <div className="text-xl font-thin self-center mt-30">Associate Lead</div>
+              <div className="text-xl font-thin self-center mt-30 pb-4">Associate Lead at EY Guidewire Analyst</div>
               <div className="flex flex-row self-center mt-30">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

@@ -39,16 +39,16 @@ export default function Category() {
         setBrief(dummyBreif);
         setDetails(dummyContact);
         break;
-      case "jee":
-        setCourseName("Test Coachings");
-        setType("Math (JEE)");
+      case "qa":
+        setCourseName("Guidewire");
+        setType("Guidewire QA Training & Support");
         setDescription(dummyDesp);
         setBrief(dummyBreif);
         setDetails(dummyContact);
         break;
-      case "thermodynamics":
+      case "jee":
         setCourseName("Test Coachings");
-        setType("Thermodynamics");
+        setType("Math (JEE)");
         setDescription(dummyDesp);
         setBrief(dummyBreif);
         setDetails(dummyContact);
@@ -99,7 +99,7 @@ export default function Category() {
                   <div className="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:transform sm:-translate-y-1/2">
                     <img
                       className="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-green-300"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      src="https://media-exp1.licdn.com/dms/image/C5603AQFhmBgQcVbabQ/profile-displayphoto-shrink_400_400/0/1589051295850?e=2147483647&v=beta&t=tSJOcOfZNgLyxi5Aa58HdEZhVplzMH7S3dlyUiphsWY"
                       alt="" />
                   </div>
                   <span className="relative ml-4 text-white-300 font-semibold leading-6 sm:ml-24 sm:pl-1">
