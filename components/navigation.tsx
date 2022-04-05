@@ -1,7 +1,7 @@
 import styles from "../styles/Dashboard.module.css";
 import { Disclosure, Menu } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -11,36 +11,51 @@ const user = {
   imageUrl:
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
-let navigation = [
-  { name: 'Dashboard', href: '/', current: true },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Courses', href: '/courses', current: false },
-  { name: 'Contact', href: '/contact', current: false }
-]
+
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navigation() {
-  const router = useRouter()
-  const navigationHandler = () => {
-
-  }
+export default function Navigation(props: any) {
+  // const router = useRouter();
+  const [navigation, setNavigation] = useState([
+    { name: 'Dashboard', href: '/', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Courses', href: '/courses', current: false },
+    { name: 'Contact', href: '/contact', current: false }
+  ]);
 
   useEffect(() => {
-    // navigation = navigation;
-    // console.log("path", router.pathname);
-    // switch (router.pathname) {
-    //   case '/':
-    //     navigation[0].current = true;
-    //     break;
-    //   case '/contact':
-    //     navigation[3].current = true;
-    //     break;
-    // }
-    console.log("navigation", navigation);
-  })
+    console.log("props", props.selectedRoute);
+    setSelectedNav(props.selectedRoute);
+  }, []);
+
+  const setSelectedNav = (selectedRoute: any) => {
+    const newNav = [...navigation];
+    switch (selectedRoute) {
+      case 'dashboard':
+        newNav[0].current = true;
+        setNavigation(newNav);
+        break;
+      case 'about':
+        newNav[1].current = true;
+        setNavigation(newNav);
+        break;
+      case 'courses':
+        newNav[2].current = true;
+        setNavigation(newNav);
+        break;
+      case 'contact':
+        newNav[3].current = true;
+        setNavigation(newNav);
+        break;
+      default:
+        newNav[0].current = true;
+        setNavigation(newNav);
+        break;
+    }
+  }
 
   return (
     <div>

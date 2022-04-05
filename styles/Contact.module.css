@@ -1,0 +1,10 @@
+.card_container {
+  background-color: #734ae8;
+  background-image: linear-gradient(315deg, #734ae8 0%, #89d4cf 74%);
+  color: #fff
+}
+
+.main_container {
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}

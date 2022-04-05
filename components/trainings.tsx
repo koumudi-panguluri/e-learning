@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function classNames(...classes: any) {
@@ -15,15 +16,18 @@ export default function Trainings() {
       items: [
         {
           itemName: 'Policy Center',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.'
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'policy_center',
         },
         {
           itemName: 'Claim Center',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.'
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'claim_center',
         },
         {
           itemName: 'Billing Center',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.'
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'billing_center',
         }
       ]
     },
@@ -34,15 +38,18 @@ export default function Trainings() {
       items: [
         {
           itemName: 'Math (JEE)',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.'
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'jee',
         },
         {
           itemName: 'Thermodynamics',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.'
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'thermodynamics',
         },
         {
           itemName: 'GATE (Support)',
-          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.'
+          itemDesp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+          itemType: 'gate',
         }
       ]
     }
@@ -62,7 +69,6 @@ export default function Trainings() {
     }
     setCurrentTab(index);
     setTabs(newTabs);
-    console.log("clicked")
   }
 
   return (
@@ -83,7 +89,7 @@ export default function Trainings() {
               <span aria-hidden="true"
                 className={classNames(
                   tab.current ? 'bg-indigo-500' : 'bg-transparent',
-                  'absolute inset-x-0 bottom-0 h-0.5'
+                  'absolute inset-x-0 bottom-0 h-1'
                 )} />
             </a>
           ))}
@@ -105,12 +111,12 @@ export default function Trainings() {
                 <div>
                   <div className="-mt-px flex divide-x divide-gray-200">
                     <div className="w-0 flex-1 flex">
-                      <a
-                        href={`#`}
-                        className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
-
-                        <span className="ml-3">Know More</span>
-                      </a>
+                      <Link
+                        href={`/courses/category?type=${item.itemType}`}>
+                        <span className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                          <a className="ml-3">Know More</a>
+                        </span>
+                      </Link>
                     </div>
                   </div>
                 </div>
